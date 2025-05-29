@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Hazard Reports - Admin</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #1e1e1e;
+        color: #fff;
+      }
+      h1 {
+        margin: 20px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background: #232323;
+      }
+      th,
+      td {
+        border: 1px solid #444;
+        padding: 10px;
+      }
+      th {
+        background: #333;
+      }
+      tr:nth-child(even) {
+        background: #292929;
+      }
+      a {
+        color: #007aff;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hazard Reports</h1>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Message</th>
+          <th>Timestamp (UTC)</th>
+        </tr>
+        {% for report in reports %}
+        <tr>
+          <td>{{ report[0] }}</td>
+          <td>{{ report[1] }}</td>
+          <td>{{ report[2] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <p><a href="/">← Back to Chat</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeBot</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h2>SafetyBot</h2>
+        <details id="history-toggle" class="sidebar-history" open>
+          <summary>Chat History</summary>
+          <hr />
+          <ul id="chat-history-list"></ul>
+        </details>
+        <nav>
+          <button id="new-chat-btn">New chat</button>
+          <button onclick="window.location.href='/admin/reports'">
+            Hazard History
+          </button>
+          <button onclick="window.location.href='/emergency-tips'">
+            Emergency Tips
+          </button>
+        </nav>
+      </aside>
+
+      <main class="chat-section">
+        <div class="messages" id="chat-box"></div>
+        <div id="chat-loader" style="display: none">
+          <section class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </section>
+        </div>
+        <form id="chat-form" class="chat-input">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Ask anything"
+            autocomplete="off"
+          />
+          <button type="submit">➤</button>
+        </form>
+      </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>
