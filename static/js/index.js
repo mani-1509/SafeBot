@@ -55,14 +55,17 @@ newChatBtn.addEventListener("click", async () => {
 function appendMessage(text, sender, think = null) {
   const msgDiv = document.createElement("div");
   msgDiv.className = `${sender} message animate-in`;
-  msgDiv.textContent = text;
+
+  if (sender === "bot") {
+    // Render Markdown for bot replies
+    msgDiv.innerHTML = marked.parse(text);
+  } else {
+    msgDiv.textContent = text;
+  }
 
   if (think) {
-    // Create a styled toggle for "think"
     const details = document.createElement("details");
     details.className = "think-toggle";
-    details.style.marginTop = "10px";
-    details.style.cursor = "pointer";
     const summary = document.createElement("summary");
     summary.textContent = "🤔 Show SafeBot's reasoning";
     summary.className = "think-summary";

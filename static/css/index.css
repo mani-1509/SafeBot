@@ -138,6 +138,29 @@ body {
   margin-right: auto;
 }
 
+/* Add to index.css */
+.bot.message {
+  font-family: "Segoe UI", "Arial", sans-serif;
+  background: #232e3c;
+  color: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+}
+.bot.message h2,
+.bot.message h3 {
+  color: #7ecfff;
+  margin-top: 1.2em;
+}
+.bot.message ul {
+  margin-left: 1.5em;
+}
+.bot.message strong {
+  color: #ffd700;
+}
+
 /* Input */
 .chat-input {
   display: flex;
@@ -264,4 +287,39 @@ details[open] {
     background-color: #b3d4fc;
     box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
   }
+}
+
+.think-toggle {
+  background: #232e3c;
+  border-radius: 50px;
+  margin-top: 12px;
+  padding: 0 12px 8px 12px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.think-toggle[open] {
+  border-radius: 8px;
+  background: #1a2533;
+}
+
+.think-summary {
+  color: #b3e0ff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.think-content {
+  font-style: italic;
+  color: #b3e0ff;
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 12px;
+  font-family: "Segoe UI", "Arial", sans-serif;
+  letter-spacing: 0.01em;
+  transform: skew(-4deg, 0deg);
 }
