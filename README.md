@@ -13,7 +13,7 @@ SafeBot is a web-based assistant for reporting hazards, getting emergency alerts
 
 ## Screenshots
 
-![SafeBot Chat UI](screenshot.png)
+![SafeBot Chat UI](static/image.png)
 
 ## Quick Start
 
@@ -83,7 +83,7 @@ SafeBot/
 
 ## License
 
-MIT
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
